@@ -41,6 +41,11 @@ class ViewController: UIViewController {
         self.pickerView .reloadAllComponents()
         readMe(myText: enterTxt.text!)
     }
+    @IBAction func deleteBtn(_ sender: Any) {
+        dataSource = dataSource.filter {$0 != enterTxt.text}
+        self.pickerView .reloadAllComponents()
+      
+    }
     
 }
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{

@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5an-G7-7ik">
+                                <rect key="frame" x="0.0" y="116" width="375" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGg-9R-c3v">
                                 <rect key="frame" x="78" y="70" width="68" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.11530262989999999" alpha="0.98327803940000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="ph4-cw-3qu"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Say it">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,39 +32,53 @@
                                     <action selector="sayItBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jlh-JP-rx6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-gJ-6yF">
-                                <rect key="frame" x="231" y="70" width="61" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4Z-KO-Gb9"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter text to verbalize" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kpa-1o-ucl">
                                 <rect key="frame" x="0.0" y="32" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5an-G7-7ik">
-                                <rect key="frame" x="0.0" y="116" width="375" height="216"/>
-                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-gM-LsM">
+                                <rect key="frame" x="229" y="70" width="61" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14424915899999999" blue="0.0084733454949999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="EUY-4j-8dK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhR-Pe-qdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-gJ-6yF">
+                                <rect key="frame" x="154" y="70" width="67" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91278476720000001" blue="0.39315189080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4Z-KO-Gb9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="E9o-gJ-6yF" firstAttribute="baseline" secondItem="wGg-9R-c3v" secondAttribute="baseline" id="7jn-r3-cHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HtX-gM-LsM" secondAttribute="trailing" constant="85" id="2yh-KG-zMJ"/>
                             <constraint firstItem="5an-G7-7ik" firstAttribute="leading" secondItem="Kpa-1o-ucl" secondAttribute="leading" id="Bq7-iR-dl2"/>
-                            <constraint firstItem="5an-G7-7ik" firstAttribute="top" secondItem="wGg-9R-c3v" secondAttribute="bottom" constant="16" id="OBl-ES-JNj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E9o-gJ-6yF" secondAttribute="trailing" constant="83" id="TSP-NM-vNN"/>
-                            <constraint firstItem="E9o-gJ-6yF" firstAttribute="leading" secondItem="wGg-9R-c3v" secondAttribute="trailing" constant="85" id="TtZ-9E-fic"/>
+                            <constraint firstItem="wGg-9R-c3v" firstAttribute="top" secondItem="Kpa-1o-ucl" secondAttribute="bottom" constant="8" symbolic="YES" id="H5n-Hz-ubl"/>
+                            <constraint firstItem="E9o-gJ-6yF" firstAttribute="baseline" secondItem="HtX-gM-LsM" secondAttribute="baseline" id="JTX-gR-Fbm"/>
+                            <constraint firstItem="wGg-9R-c3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="Lf8-69-FcG"/>
+                            <constraint firstItem="HtX-gM-LsM" firstAttribute="leading" secondItem="E9o-gJ-6yF" secondAttribute="trailing" constant="8" symbolic="YES" id="RkZ-hl-mh3"/>
                             <constraint firstAttribute="trailing" secondItem="Kpa-1o-ucl" secondAttribute="trailing" id="XDH-LA-kWG"/>
-                            <constraint firstItem="wGg-9R-c3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="XeP-vb-OBU"/>
+                            <constraint firstItem="E9o-gJ-6yF" firstAttribute="leading" secondItem="wGg-9R-c3v" secondAttribute="trailing" constant="8" symbolic="YES" id="YGg-Zi-ME1"/>
                             <constraint firstItem="Kpa-1o-ucl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="crv-8d-L3Z"/>
+                            <constraint firstItem="E9o-gJ-6yF" firstAttribute="centerX" secondItem="Kpa-1o-ucl" secondAttribute="centerX" id="hh7-XN-w6g"/>
+                            <constraint firstItem="wGg-9R-c3v" firstAttribute="baseline" secondItem="E9o-gJ-6yF" secondAttribute="baseline" id="q0y-VB-Hd8"/>
                             <constraint firstItem="Kpa-1o-ucl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r5u-pF-Iqq"/>
-                            <constraint firstItem="wGg-9R-c3v" firstAttribute="top" secondItem="Kpa-1o-ucl" secondAttribute="bottom" constant="8" symbolic="YES" id="vqY-c5-lqQ"/>
+                            <constraint firstItem="5an-G7-7ik" firstAttribute="top" secondItem="wGg-9R-c3v" secondAttribute="bottom" constant="16" id="wHz-Uw-HX5"/>
                             <constraint firstItem="5an-G7-7ik" firstAttribute="trailing" secondItem="Kpa-1o-ucl" secondAttribute="trailing" id="x35-Z8-svu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

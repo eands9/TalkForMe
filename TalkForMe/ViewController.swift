@@ -58,7 +58,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //detailLabel.text = dataSource[row]
+        enterTxt.text = dataSource[row]
         readMe(myText: dataSource[row])
     }
     

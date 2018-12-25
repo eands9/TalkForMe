@@ -36,6 +36,11 @@ class ViewController: UIViewController {
     @IBAction func sayItBtn(_ sender: Any) {
         readMe(myText: enterTxt.text!)
     }
+    @IBAction func addBtn(_ sender: Any) {
+        dataSource.append(enterTxt.text!)
+        self.pickerView .reloadAllComponents()
+        readMe(myText: enterTxt.text!)
+    }
     
 }
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{

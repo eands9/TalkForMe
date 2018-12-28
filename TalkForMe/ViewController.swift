@@ -11,7 +11,7 @@ import Speech
 
 class ViewController: UIViewController {
 
-    var dataSource = ["Hi Mom!","Hi Dad!","Hi Kyle!","Hi Kate!"]
+    var dataSource = ["Hi Aiva!","How was your winter break?","I hope you had a wonderful Christmas","Thank you.","Your welcome!","I had fun with my family over the winter break"]
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var enterTxt: UITextField!
     
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     func readMe( myText: String) {
         let utterance = AVSpeechUtterance(string: myText )
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.5
+        utterance.rate = 0.4
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
